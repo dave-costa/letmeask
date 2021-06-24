@@ -1,0 +1,33 @@
+.btn {
+    margin-top: 64px;
+    height: 50px;
+    border-radius: 8px;
+    font-weight: 500;
+    background-color: #835afd;
+    padding: 0 32px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: none;
+    transition: filter .3s;
+    /*vai efectuar uma transição no filter de 0.2 s*/
+    img {
+        margin-right: 8px;
+    }
+    outline: none;
+    &:not(:disabled):hover {
+        /*so vai aplicar o hover se o botao nao estiver 
+        desablitado
+        */
+        filter: brightness(0.9);
+        /*vamos dimininuir o brilho do botao em 10%*/
+    }
+    &:disabled {
+        /*quando o botao estiver desativado*/
+        opacity: 0.6;
+        cursor: not-allowed;
+        /*vai aparecer a plaquinha de nao permitido*/
+    }
+}

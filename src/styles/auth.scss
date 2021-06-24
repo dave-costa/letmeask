@@ -1,0 +1,139 @@
+.page-auth {
+    display: flex;
+    align-items: stretch;
+    height: 100vh;
+    /*esse height para ocupar toda altura da tela*/
+    aside {
+        flex: 7;
+        background: #835afd;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+    
+        /*todo conteudo dentro do aside fica um por 
+        baixo do outro
+        */
+        justify-content: center;
+    
+        padding: 7.5rem 5rem;
+        /*primeiro valor é em baixo e em cima e o segundo
+        nas laterais 
+        */
+        img {
+            max-width: 320px;
+        }
+        strong {
+            font: bold 36px 'Poppins', sans-serif;
+            line-height: 42px;
+            margin-top: 16px;
+        }
+        p{
+            font-size: 24px;
+            line-height: 32px;
+            margin-top: 16px;
+            color: #f8f8f8;
+        }
+    }
+    main {
+        flex: 8;
+        padding: 0 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+    
+    .content {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 100%;
+        max-width: 220px;
+        align-items: stretch;
+        text-align: center;
+        /*vai esticar os itens para couber 
+        no espaço todo*/
+        >img {
+            align-self: center;
+        }
+        /*essa setinha na imagem é pra pegar apenas a imagem
+        que está dentro do content, para nao pegar a 
+        imagem do icone também*/
+        h2 {
+            font-size: 24px;
+            margin: 64px 0 24px;
+            font-family: 'Poppins', sans-serif;
+        }
+        form {
+            input {
+                height: 50px;
+                border-radius: 8px;
+                padding: 0 16px;
+                background: #fff;
+                border: 1px solid #a8a8b3; 
+                outline: none;
+            }
+            button {
+                margin-top: 16px;
+            }
+            button, input {
+                width: 100%;
+            }
+            
+        } 
+        p{
+            font-size: 14px;
+            color: #737380;
+            margin-top: 16px;
+            a {
+                color: #e559f9;
+            }
+        }
+    }
+    .btn-create {
+        margin-top: 64px;
+        height: 50px;
+        border-radius: 8px;
+        font-weight: 500;
+        background-color: #ea4335;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        border: none;
+        transition: filter .3s;
+        /*vai efectuar uma transição no filter de 0.2 s*/
+        img {
+            margin-right: 8px;
+        }
+        outline: none;
+        &:hover {
+            filter: brightness(0.9);
+            /*vamos dimininuir o brilho do botao em 10%*/
+        }
+    }
+    .separator {
+        font-size: .8rem;
+        color: #a8a8b3;
+        margin: 32px 0;
+        display: flex;
+        align-items: center;
+
+        &::before {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: #a8a8b3;
+            margin-right: 16px;
+        }
+        &::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: #a8a8b3;
+            margin-left: 16px;
+        }
+    }
+}
+
